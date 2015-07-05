@@ -60,7 +60,6 @@ class ScanThreadSingle(ScanThread):
 		while not self.SingleQueue.empty():
 			p = self.SingleQueue.get()
 			self.Ping(p)
-tudou.c 
 
 class ScanThreadMulti(ScanThread):
 	def __init__(self, scanIP, PortList):
