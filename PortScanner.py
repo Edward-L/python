@@ -60,7 +60,7 @@ class ScanThreadSingle(ScanThread):
 		while not self.SingleQueue.empty():
 			p = self.SingleQueue.get()
 			self.Ping(p)
-
+tudou.c 
 
 class ScanThreadMulti(ScanThread):
 	def __init__(self, scanIP, PortList):
@@ -126,23 +126,6 @@ class Shell(cmd.Cmd):
     				exit()
     			for i in range(int(RangeList[0]),int(RangeList[1])):
     				PortList.append(i)
-
-	# def do_scan(self, line):
-	# 	global nThread, PortList
-	# 	ThreadList = []
-	# 	strIP = line
-	# 	SingleQueue = GetQueue(PortList)
-	# 	for i in range(0, nThread):
-	# 		print strIP
-	# 		print SingleQueue
-	# 		t = ScanThreadSingle(strIP, SingleQueue)
-	# 		print t
-	# 		ThreadList.append(t)
-	# 		print 3
-	# 	for t in ThreadList:
-	# 		t.start()
-	# 	for t in ThreadList:
-	# 		t.join()
 
 	def do_scan(self, line):
 		global nThread, PortList
